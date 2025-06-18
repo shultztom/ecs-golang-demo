@@ -1,2 +1,1 @@
-docker build -t us-central1-docker.pkg.dev/shultzlab/docker-gcp/ecs-golang-demo:latest .
-#docker push us-central1-docker.pkg.dev/shultzlab/docker-gcp/ecs-golang-demo:latest
+docker build -t 965336086931.dkr.ecr.us-east-1.amazonaws.com/shultzlab/ecs-golang-demo . && docker push 965336086931.dkr.ecr.us-east-1.amazonaws.com/shultzlab/ecs-golang-demo:latest

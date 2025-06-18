@@ -1,4 +1,4 @@
-FROM golang:1.24.3-alpine AS builder
+FROM public.ecr.aws/docker/library/golang:1.24.4-bookworm AS builder
 WORKDIR /app
 
 COPY go.mod ./
@@ -10,7 +10,7 @@ COPY . ./
 
 RUN go build -o main
 
-FROM amazonlinux:2023 AS runner
+FROM public.ecr.aws/amazonlinux/amazonlinux:2023-minimal AS runner
 WORKDIR /app
 COPY --from=builder /app/main .
 EXPOSE 8080
